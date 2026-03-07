@@ -20,7 +20,7 @@ class SpecialHandlerCompat : SpecialHandler {
 
     object InnerAction : ConstMediaAction {
         override val argc = 1
-        override val mediaCost: Long = 0
+        override val mediaCost: Long = MediaConstants.CRYSTAL_UNIT * 10
 
         override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
             val ctx = env.caster ?: return emptyList()
